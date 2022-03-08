@@ -1,0 +1,25 @@
+{
+  "name": "cra-template-randomashes",
+  "author": "Ashley Clifton",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript"
+  ],
+  "description": "Create React App template with Typescript, Cypress, Linters, etc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RandomAshes/cra-template-randomashes.git",
+    "directory": "cra-template-randomashes"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
