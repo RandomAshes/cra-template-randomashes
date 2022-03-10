@@ -5,7 +5,7 @@ This is my personal react/typescript template for [Create React App](https://git
 To use this template, use the following script:
 
 ```sh
-npx create-react-app YOUR_APP_NAME --template file:../path/to/your/template/cra-template-randomashes
+npx create-react-app my-app --template file:./cra-template-randomashes
 ```
 
 For more information, please refer to:

@@ -1,8 +1,25 @@
 {
   "package": {
     "scripts": {
+      "tests:pre-commit": "CI=true react-scripts test --findRelatedTests",
       "cy:open": "cypress open",
-      "cy:run": "cypress run"
+      "cy:run": "cypress run",
+      "lint": "eslint 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
+      "lint:fix": "eslint --fix 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
+      "prettier": "prettier --check '**/*.{scss,tsx,ts,js}'",
+      "prettier:fix": "prettier --write '**/*.{scss,tsx,ts,js}'",
+      "stylelint": "stylelint '**/*.?(s)css'",
+      "stylelint:fix": "stylelint --fix '**/*.?(s)css'"
+    },
+    "lint-staged": {
+      "**/*.+(js|ts|tsx|test.tsx|spec.tsx)": [
+        "npm run tests:pre-commit",
+        "npm run lint:fix",
+        "npm run prettier:fix"
+      ],
+      "**/*.?(s)css": [
+        "npm run stylelint:fix"
+      ]
     },
     "dependencies": {
       "typescript": "^4.4.2",
@@ -17,10 +34,13 @@
       "@types/node": "^16.7.13",
       "@types/react": "^17.0.20",
       "@types/react-dom": "^17.0.9",
-      "cypress": "^9.5.1"
-    },
-    "eslintConfig": {
-      "extends": ["react-app", "react-app/jest"]
+      "cypress": "^9.5.1",
+      "eslint-plugin-cypress": "^2.12.1",
+      "eslint-plugin-simple-import-sort": "^7.0.0",
+      "lint-staged": "^12.3.5",
+      "prettier": "^2.5.1",
+      "stylelint": "^14.5.3",
+      "stylelint-config-prettier": "^9.0.3"
     }
   }
 }
