@@ -4,8 +4,8 @@
       "tests:pre-commit": "CI=true react-scripts test --findRelatedTests",
       "cy:open": "cypress open",
       "cy:run": "cypress run",
-      "lint": "eslint 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
-      "lint:fix": "eslint --fix 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
+      "eslint": "eslint 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
+      "eslint:fix": "eslint --fix 'src/**/*.+(js|ts|tsx|test.tsx)' 'cypress/**/*.+(js|spec.js)'",
       "prettier": "prettier --check '**/*.{scss,tsx,ts,js}'",
       "prettier:fix": "prettier --write '**/*.{scss,tsx,ts,js}'",
       "stylelint": "stylelint '**/*.?(s)css'",
@@ -14,7 +14,7 @@
     "lint-staged": {
       "**/*.+(js|ts|tsx|test.tsx|spec.tsx)": [
         "npm run tests:pre-commit",
-        "npm run lint:fix",
+        "npm run eslint:fix",
         "npm run prettier:fix"
       ],
       "**/*.?(s)css": [
