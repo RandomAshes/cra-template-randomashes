@@ -21,6 +21,11 @@
         "npm run stylelint:fix"
       ]
     },
+    "engines": {
+      "npm": ">=6.0.0",
+      "yarn": "please-use-npm",
+      "node": ">= 12.5.0"
+    },
     "dependencies": {
       "typescript": "^4.4.2",
       "web-vitals": "^2.1.0",
