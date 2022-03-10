@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'react-app',
-    'react-app/jest',
-    'plugin:cypress/recommended'
-  ],
+  extends: ['react-app', 'react-app/jest', 'plugin:cypress/recommended'],
   plugins: ['jsx-a11y', 'cypress', 'simple-import-sort'],
   env: {
     'cypress/globals': true,
@@ -22,9 +18,7 @@ module.exports = {
           // Packages. `react` related packages come first.
           ['^react', '^@?\\w'],
           // Internal packages.
-          [
-            '^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)',
-          ],
+          ['^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)'],
           // Side effect imports.
           ['^\\u0000'],
           // Parent imports. Put `..` last.
